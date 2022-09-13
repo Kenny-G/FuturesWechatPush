@@ -166,6 +166,8 @@ def PushData(use_time='', use_friday=False):
             else:
                 SaveImage(filename, message_ret, Config_data['file_day_size'])
             SendImage(Config_data['url'], filename)
+
+            driver.quit()
             break
         except Exception as e:
             # 发生异常, 等待1秒重试
